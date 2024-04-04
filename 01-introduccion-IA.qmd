@@ -260,6 +260,14 @@ Fuente de imagen: [*Understanding Artificial Intelligence - DataCamp*](https://w
 Fuente de imágenes: [*Understanding Artificial Intelligence - DataCamp*](https://www.datacamp.com/courses/understanding-artificial-intelligence)
 :::   
 
+## Machine Learning
+
+![](img/machine-learning.png){fig-align="center"}
+
+::: footer
+Fuente de imagen: [*Understanding Artificial Intelligence - DataCamp*](https://www.datacamp.com/courses/understanding-artificial-intelligence)
+:::   
+
 # [⚠️ LIMITACIONES DE LA IA:]{.story} [Alcances y desafíos]{style="float:right;text-align:right;"} {background-color="#333"}
 
 ## ¿Qué es capaz de hacer la IA? {.scrollable}
@@ -272,6 +280,15 @@ Fuente de imágenes: [*Understanding Artificial Intelligence - DataCamp*](https:
   - **Ejemplos:** medidores inteligentes de consumo de energía, rutas inteligentes en la cadena de suministro, optimización de tráfico terrestre y aéreo, etc.
 - **Automatización:**
   - **Ejemplos:** clasificación de documentos, vehículos no tripulados para monitoreo de cultivos, fumigación aérea con drones, etc.
+
+## Usos potenciales
+
+![](img/ia-sostenible.png){fig-align="center"}
+
+::: footer
+Fuente de imagen: [*The 17 Goals - United Nations*](https://sdgs.un.org/goals)
+:::   
+
 
 ## Limitaciones de la IA ✌️🕊🏳️🌈☮  
 
