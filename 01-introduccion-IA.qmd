@@ -1,0 +1,297 @@
+---
+title: "Inteligencia Artificial: Avances y Desafíos"
+author: Edimer David Jaramillo
+date: "2024-04-06"
+execute: 
+  eval: false
+format: 
+  revealjs:
+    multiplex: false # si se agrega en true se produce otro archivo html 
+    footer: "[Edimer David Jaramillo](https://edimer.netlify.app/en/)"
+    theme: ["tema_slides3.scss"]
+    slide-number: true
+    show-slide-number: all
+    incremental: true
+    logo: img/logo-unal.png
+    chalkboard: true
+    title-slide-attributes:
+      data-background-image: img/fondo13.jpg
+      data-background-size: cover
+---
+
+```{r setup}
+#| include: false
+
+library(palmerpenguins)
+
+# for interactive plots
+library(ggiraph)
+library(patchwork)
+library(shadowtext)
+
+# for color
+library(paletteer)
+
+# for cran plots
+library(cranlogs)
+library(tidyverse)
+library(scales)
+
+# for fonts
+library(showtext)
+font_add_google("Jost", "Jost")
+showtext_auto()
+theme_set(theme_minimal(base_family = "Jost"))
+
+library(recipes)
+library(broom)
+# for reporting cran downloads
+start_date <- "2020-07-23"
+end_date <- "2022-06-15"
+```
+
+## ¿Qué es la Inteligencia Artificial (IA)?
+
+> *"Sistemas que, dado un objetivo, perciben su entorno, interpretan los datos recopilados, razonan para derivar conocimiento y deciden las mejores acciones para lograr la meta."* The European Commission’s, 2018. 
+
+![](img/paper-ia-ec.png){fig-align="center"}
+
+::: footer
+Fuente de imagen: [*The European Commission’s HIGH-LEVEL EXPERT GROUP ON ARTIFICIAL INTELLIGENCE*](https://ec.europa.eu/futurium/en/system/files/ged/ai_hleg_definition_of_ai_18_december_1.pdf)
+::: 
+
+## ¿Qué es la Inteligencia Artificial (IA)?
+
+> *"La inteligencia artificial es el último invento que la humanidad necesitará hacer."* Nick Bostrom, 2015. 
+
+![](img/nick-bostrom.jpg){fig-align="center"}
+
+::: footer
+Fuente de imagen: [*Wikipedia: Nick Bostrom*](https://es.wikipedia.org/wiki/Nick_Bostrom)
+::: 
+
+# [⏳HISTORIA DE LA IA:]{.story} [De los griegos a nuestros días]{style="float:right;text-align:right;"} {background-color="#333"}
+
+## *A hombros de gigantes...*
+
+<br>
+
+![](img/hombros-gigantes2.jpg){fig-align="center"}
+
+::: footer
+Fuente de imagen: [*A hombros de gigantes – Newton (1ºBach)*](https://arjephilo.com/2017/10/23/a-hombros-de-gigantes-newton-1obach/)
+:::
+
+## Los Griegos: Cuna de la civilización
+
+::: columns
+
+::: {.column width="40%"}
+
+![](img/heron1.jpg){fig-align="center" width="80%"}
+
+:::
+
+::: {.column width="20%"}
+
+<br>
+
+![](img/heron3.png){fig-align="center"}
+
+[Herón de Alejandría](https://es.wikipedia.org/wiki/Her%C3%B3n_de_Alejandr%C3%ADa)
+
+:::
+
+::: {.column width="40%"}
+
+![](img/heron2.jpg){fig-align="center" width="80%"}
+
+:::
+
+:::
+
+
+::: footer
+Fuente de imágenes: [*Inventos griegos, los autómatas de Herón*](https://historia.nationalgeographic.com.es/a/inventos-griegos-automatas-heron_9395#google_vignette)
+::: 
+
+## Alan Turing el genio
+
+::: columns
+
+::: {.column width="60%"}
+
+<br>
+
+![](img/turing.jpg){fig-align="center"}
+
+:::
+
+::: {.column width="40%"}
+
+> "*¿Pueden las máquinas pensar?*" Alan Turing, 1950.
+
+> "*Una computadora merecería ser llamada inteligente si pudiera engañar a un humano haciéndole creer que es humano.*" Alan Turing, 1950.
+
+:::
+
+:::
+
+
+::: footer
+Fuente de imágenes: [*Inventos griegos, los autómatas de Herón*](https://historia.nationalgeographic.com.es/a/inventos-griegos-automatas-heron_9395#google_vignette)
+::: 
+
+## Líneas de tiempo de la IA {.scrollable}
+
+::: {.panel-tabset}
+
+### Línea de tiempo 1
+
+![](img/timeline2.png){fig-align="center"}
+
+### Línea de tiempo 2
+
+![](img/lineatiempo1.jpg){fig-align="center"}
+
+### Línea de tiempo 3
+
+![](img/timeline1.png){fig-align="center"}
+
+:::
+
+::: footer
+- Fuente imagen 1: [*Journey of Artificial Intelligence*](https://www.researchgate.net/figure/Artificial-Intelligence-timeline-before-the-term-artificial-intelligence_fig1_355759683)
+- Fuente imagen 2: [*History of Artificial Intelligence*](https://qbi.uq.edu.au/brain/intelligent-machines/history-artificial-intelligence)
+- Fuente imagen 3: [*Introduction to Artificial Intelligence*](https://link.springer.com/chapter/10.1007/978-3-031-25928-9_1)
+::: 
+
+## Líderes de la IA en la actualidad
+
+![](img/time-list-ai.jpg){fig-align="center"}
+
+::: footer
+Fuente: [*Time100/AI*](https://time.com/collection/time100-ai/)
+::: 
+
+# [📕 CONCEPTOS CLAVES EN IA:]{.story} [El auge de las ciencias de la computación]{style="float:right;text-align:right;"} {background-color="#333"}
+
+## Ciencias de la Computación
+
+![](img/conceptos1.png){fig-align="center"}
+
+::: footer
+Fuente de imagen: [*Understanding Artificial Intelligence - DataCamp*](https://www.datacamp.com/courses/understanding-artificial-intelligence)
+::: 
+
+## Ciencias de la Computación
+
+![](img/conceptos2.png){fig-align="center"}
+
+::: footer
+Fuente de imagen: [*Understanding Artificial Intelligence - DataCamp*](https://www.datacamp.com/courses/understanding-artificial-intelligence)
+::: 
+
+## IA vs IAG (Inteligencia Artificial General)  {.scrollable}
+
+::: columns
+
+::: {.column width="50%"}
+
+### IA
+
+- Sistemas que perciben, interpretan y aprenden desde los datos.
+- Estos sistemas se destacan por ejecutar tareas específicas.
+- **Ejemplos:**
+  - Asistentes de voz
+  - Reconocimiento facial
+  - Motores/sistemas de recomendación
+  - Robots industriales
+
+:::
+  
+::: {.column width="50%"}
+
+### IAG
+
+- Inteligencia o forma de razonamiento igual a superir al promedio de la inteligencia humana.
+- Estos sistemas se destacan por resolver múltiples tareas.
+- **Ejemplos:**
+  - Carros autónomos
+  - [AlphaGo](https://deepmind.google/technologies/alphago/)
+  - **IA Generativa** como [ChatGPT](https://chat.openai.com/) [(*Large Language Models - LLMs*)](https://es.wikipedia.org/wiki/Modelo_de_lenguaje_grande) y  [DALL-E 3.](https://openai.com/dall-e-3) 
+  
+:::
+  
+:::
+
+## Subdominios de la IA y áreas relacionadas  {.scrollable}
+
+::: columns
+
+::: {.column width="40%"}
+
+- **Aprendizaje automático:** sistemas que aprenden desde los datos para realizar predicciones e inferencia.
+  - **Deep Learning:** uso de redes neuronales para resolver problemas más complejos.
+- **Robótica:** sistemas que interactúan con el entorno físico.
+- **Representación de conocimiento y razonamiento:** comunicacón entre sistemas de IA.
+- **Visión artificial:** sistemas de IA para clasfificación de imágenes, detección de objetos, reconocimiento facial, etc.
+- **Procesamiento del lenguaje natural:** sistemas que analizan y entienden el lenguaje humano (texto y voz).
+
+:::
+  
+::: {.column width="60%"}
+
+### Subdominios
+
+![](img/subdominios.png){fig-align="center"}
+
+### Disciplinas relacionadas
+
+![](img/disciplinas-relacionadas-ia.png){fig-align="center"}
+
+:::
+  
+:::
+
+
+
+::: footer
+Fuente de imágenes: [*Understanding Artificial Intelligence - DataCamp*](https://www.datacamp.com/courses/understanding-artificial-intelligence)
+:::   
+
+# [⚠️ LIMITACIONES DE LA IA:]{.story} [Alcances y desafíos]{style="float:right;text-align:right;"} {background-color="#333"}
+
+## ¿Qué es capaz de hacer la IA? {.scrollable}
+
+- **Predicciones e inferencia:**
+  - **Ejemplos:** predicción de clima, predicción de precios de mercado, recomendación de libros, etc.
+- **Reconocimiento de patrones:**
+  - **Ejemplos:** reducción de dimensionalidad, segmentación o clusterización, detección de anomalías, etc.
+- **Optimización:**
+  - **Ejemplos:** medidores inteligentes de consumo de energía, rutas inteligentes en la cadena de suministro, optimización de tráfico terrestre y aéreo, etc.
+- **Automatización:**
+  - **Ejemplos:** clasificación de documentos, vehículos no tripulados para monitoreo de cultivos, fumigación aérea con drones, etc.
+
+## Limitaciones de la IA ✌️🕊🏳️🌈☮  
+
+![](img/etica-ia.png){fig-align="center"}
+
+- **Habilidades sociales:** inteligencia emocional, empatia
+- **Sesgos (parcialidad):** sesgos de género, sesgos raciales, xenofobia, etc.
+- **Nuevos escenarios del mundo real**
+- **Datos**
+
+::: footer
+Fuente de imagen: [*AI and Law: What are the Ethical Considerations?*](https://www.clio.com/resources/ai-for-lawyers/ethics-ai-law/)
+:::   
+
+# {background-color="#333"}
+ 
+<center>
+🤝🙂🤝
+</center>
+
+<br>
+
+![](img/gracias.gif){fig-align="center"}
