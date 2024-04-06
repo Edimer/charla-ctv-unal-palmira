@@ -2,3 +2,7 @@
   quarto-pub:
     - id: f6ee84e9-9423-4261-a453-b301872287f4
       url: 'https://edimer.quarto.pub/inteligencia-artificial'
+- source: 02-floracion-plantas.qmd
+  quarto-pub:
+    - id: 8f25a7b4-c6fd-4f3e-b366-ec200510be32
+      url: 'https://edimer.quarto.pub/la-ley-de-las-plantas-con-flores'
