@@ -1,0 +1,4 @@
+- source: 01-introduccion-IA.qmd
+  quarto-pub:
+    - id: f6ee84e9-9423-4261-a453-b301872287f4
+      url: 'https://edimer.quarto.pub/inteligencia-artificial'

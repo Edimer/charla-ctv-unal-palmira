@@ -19,37 +19,6 @@ format:
       data-background-size: cover
 ---
 
-```{r setup}
-#| include: false
-
-library(palmerpenguins)
-
-# for interactive plots
-library(ggiraph)
-library(patchwork)
-library(shadowtext)
-
-# for color
-library(paletteer)
-
-# for cran plots
-library(cranlogs)
-library(tidyverse)
-library(scales)
-
-# for fonts
-library(showtext)
-font_add_google("Jost", "Jost")
-showtext_auto()
-theme_set(theme_minimal(base_family = "Jost"))
-
-library(recipes)
-library(broom)
-# for reporting cran downloads
-start_date <- "2020-07-23"
-end_date <- "2022-06-15"
-```
-
 ## ¿Qué es la Inteligencia Artificial (IA)?
 
 > *"Sistemas que, dado un objetivo, perciben su entorno, interpretan los datos recopilados, razonan para derivar conocimiento y deciden las mejores acciones para lograr la meta."* The European Commission’s, 2018. 
@@ -301,7 +270,259 @@ Fuente de imagen: [*The 17 Goals - United Nations*](https://sdgs.un.org/goals)
 
 ::: footer
 Fuente de imagen: [*AI and Law: What are the Ethical Considerations?*](https://www.clio.com/resources/ai-for-lawyers/ethics-ai-law/)
-:::   
+:::  
+
+# [⚛️ CASOS DE USO DE LA IA:]{.story} [Ejemplos genéricos]{style="float:right;text-align:right;"} {background-color="#333"}
+
+## Visión artificial
+
+::: columns
+
+::: {.column width="70%"}
+
+![](img/Meta-SAM-title.jpg){fig-align="center"}
+
+:::
+  
+::: {.column width="30%"}
+
+<br>
+
+![](img/meta-logo.svg){fig-align="center"}
+
+
+[Modelo SAM (Segment Anything)](https://segment-anything.com/)
+
+:::
+  
+:::
+
+::: footer
+Fuente de imágenes: [*Segment Anything Model (SAM): a new AI model from Meta AI *](https://segment-anything.com/)
+::: 
+
+## IA Generativa
+
+::: columns
+
+::: {.column width="50%"}
+
+![](img/stable-dif-3.png){fig-align="center"}
+
+[Stable Diffusion 3](https://stability.ai/stable-image)
+
+[Paper Stable Diffusion 3](https://arxiv.org/pdf/2403.03206.pdf)
+
+[Demo: Stable Diffusion XL](https://huggingface.co/spaces/google/sdxl)
+
+:::
+  
+::: {.column width="50%"}
+
+![](img/microsoft-designer.webp){fig-align="center"}
+
+[Generador de Imágenes de Designer](https://www.bing.com/images/create?FORM=BICMB1&ssp=1&darkschemeovr=0&setlang=es-CL&safesearch=moderate&toWww=1&redig=8195C3604CE2443CAD2B9B2FB3512087)
+
+[DALL-E 3](https://openai.com/dall-e-3)
+
+:::
+  
+:::
+
+## Procesamiento del Lenguaje Natural (NLP) - LLMs {.scrollable}
+
+### Un antes y un después: *El Transformer*
+
+![](img/transformer2.png){fig-align="center"}
+
+### Evolución de los LLMs
+
+![](img/llms.webp){fig-align="center"}
+
+::: footer
+- Fuente de imagen 1: [*Attention Is All You Need*](https://arxiv.org/abs/1706.03762)
+- Fuente de imagen 2: [*List of Open Sourced Fine-Tuned Large Language Models (LLM)*](https://sungkim11.medium.com/list-of-open-sourced-fine-tuned-large-language-models-llm-8d95a2e0dc76)
+::: 
+
+## LLMs abiertos vs cerrados {.scrollable}
+
+::: columns
+
+::: {.column width="50%"}
+
+### Modelos de código abierto
+
+![](img/meta-logo.svg){fig-align="center"}
+
+- [SONAR: Sentence-Level Multimodal and Language-Agnostic Representations](https://ai.meta.com/research/publications/sonar-sentence-level-multimodal-and-language-agnostic-representations/)
+- [Mistral AI](https://mistral.ai/)
+- [LLaVA: Large Language and Vision Assistant](https://llava-vl.github.io/)
+- [Gemma: Introducing new state-of-the-art open models](https://blog.google/technology/developers/gemma-open-models/)
+- [Anthropic: Claude 3 - Haiku](https://www.anthropic.com/news/claude-3-family)
+- [Announcing DBRX: A new standard for efficient open source LLMs](https://www.databricks.com/blog/announcing-dbrx-new-standard-efficient-open-source-customizable-llms)
+
+¿En dónde podemos probar o "jugar" con estos modelos abiertos 🤔? ➔ ➜  [Perplexity Labs](https://labs.perplexity.ai/)
+
+:::
+  
+::: {.column width="50%"}
+
+### Modelos de código cerrado
+
+![](img/open-ai.png){fig-align="center"}
+
+- [ChatGPT 3.5](https://chat.openai.com/)
+- [GPT-4](https://openai.com/gpt-4)
+
+:::
+  
+:::
+
+## ¿Dónde encontrar modelos y cómo construir sistemas de IA con LLMs?  {.scrollable}
+
+![](img/hf-logo-with-title.png){fig-align="center"}
+
+[Lista de modelos abiertos en Hugging Face](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
+
+![](img/langchain.png){fig-align="center"}
+
+[LangChain](https://www.langchain.com/)
+
+## Herramientas de software
+
+::: {layout="[[1,1, 1], [1, 1, 1]]"}
+![](img/python.png){fig-align="center" width="80%"}
+
+![](img/logo-r.png){fig-align="center" width="80%"}
+
+![](img/julia.png){fig-align="center" width="80%"}
+
+![](img/pytorch.png){fig-align="center"}
+
+![](img/tensorflow.png){fig-align="center" width="80%"}
+
+![](img/keras.png){fig-align="center" width="80%"}
+:::
+
+# [🌱 CASOS DE USO DE LA IA:]{.story} [Ejemplos en la agricultura]{style="float:right;text-align:right;"} {background-color="#333"}
+
+## Análisis predictivo geoespacial
+
+![](img/soilgrids.png){fig-align="center"}
+
+::: footer
+Paper: [*SoilGrids 2.0: producing soil information for the globe with quantified spatial uncertainty*](https://soil.copernicus.org/articles/7/217/2021/)
+::: 
+
+## Smart Farming
+
+![](img/smart-farming.png){fig-align="center"}
+
+::: footer
+- Fuente de imagen: [*AI and Smart Farming: The Future of Agriculture*](https://www.linkedin.com/pulse/ai-smart-farming-future-agriculture-sami-elkady-)
+- [IBM: What is smart farming?](https://www.ibm.com/topics/smart-farming)
+::: 
+
+## Realidad virtual
+
+![](img/realidad-virtual.jpg){fig-align="center"}
+
+::: footer
+Fuente: [*Virtual reality-based training on sustainable cotton cultivation in Cameroon and Burkina Faso*](https://www.nachhaltige-agrarlieferketten.org/en/news/virtual-reality-based-training-on-sustainable-cotton-cultivation-in-cameroon-and-burkina-faso)
+::: 
+
+# [🏫 RECURSOS:]{.story} [Una disciplina en constante evolución]{style="float:right;text-align:right;"} {background-color="#333"}
+
+## Libros
+
+::: columns
+
+::: {.column width="50%"}
+
+[The Elements of Statistical Learning](https://hastie.su.domains/Papers/ESLII.pdf)
+
+![](img/libro1.jpg){fig-align="center" width="50%"}
+
+:::
+  
+::: {.column width="50%"}
+
+[Deep Learning](https://www.deeplearningbook.org/)
+
+![](img/libro2.jpg){fig-align="center" width="58%"}
+
+:::
+  
+:::
+
+::: footer
+[*Lista de libros recomendados*](https://semillerorpy.netlify.app/books-rpy)
+::: 
+
+## Cursos
+
+::: {layout="[[1,1], [1, 1]]"}
+![](img/coursera.png){fig-align="center"}
+
+![](img/edx.png){fig-align="center"}
+
+![](img/deeplearningai.png){fig-align="center"}
+
+![](img/datacamp.webp){fig-align="center" width="80%"}
+:::
+
+## Canales de YouTube
+
+::: columns
+
+::: {.column width="33%"}
+
+[Dot CSV](https://www.youtube.com/@DotCSV)
+
+![](img/dotcsv.jpg){fig-align="center"}
+:::
+  
+::: {.column width="33%"}
+
+[Inteligencia Artificial](https://www.youtube.com/@la_inteligencia_artificial)
+
+![](img/canal-ia.jpg){fig-align="center"}
+
+:::
+
+::: {.column width="33%"}
+
+[PRO ROBOTS - Robots, IA y tecnologías del futuro](https://www.youtube.com/@PROROBOTSEsp)
+
+![](img/prorobots.jpg){fig-align="center"}
+
+:::
+  
+:::
+
+## Documentales
+
+::: columns
+
+::: {.column width="50%"}
+
+<center>
+<iframe width="800" height="500" src="https://www.youtube.com/embed/PPMb_rrej5c" frameborder="0" allowfullscreen></iframe>
+</center>
+
+:::
+  
+::: {.column width="50%"}
+
+<center>
+<iframe width="800" height="500" src="https://www.youtube.com/embed/xyJfQpXK1kc" frameborder="0" allowfullscreen></iframe>
+</center>
+
+:::
+  
+:::
+
+
 
 # {background-color="#333"}
  
